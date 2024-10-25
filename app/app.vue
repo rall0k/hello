@@ -1,10 +1,11 @@
 <script setup>
-	const db = hubDatabase()
-	console.log(db)
-	
+	const { data } = await useFetch('/api/users')
 </script>
 
 <template>
+	<pre>
+		{{ data }}
+	</pre>
   <NuxtRouteAnnouncer />
   <NuxtLoadingIndicator />
   <NuxtPage />
