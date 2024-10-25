@@ -1,10 +1,10 @@
-<script setup async>
-	const { data } = await useFetch('/api/users')
+<script setup>
+	const { results } = await useFetch('/api/users')
 </script>
 
 <template>
 	<pre>
-		-- {{ data }} --
+		-- {{ results }} --
 	</pre>
   <NuxtRouteAnnouncer />
   <NuxtLoadingIndicator />
