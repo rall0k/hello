@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	server: {
+    port: process.env.PORT ? Number(process.env.PORT) : 3000, // Railway použije vlastný PORT
+    host: '0.0.0.0' // musí byť takto, inak bude počúvať len lokálne
+  },
   // https://nuxt.com/modules
   modules: [
     '@nuxthub/core',
